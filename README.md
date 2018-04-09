@@ -27,7 +27,7 @@ Current sample data includes 3 types of Named Entities, including ORG(单位), P
 To train with IDCNN+CRF (default), run:
 
 
-#python3 main.py --train=True --clean=True
+python3 main.py --train=True --clean=True
 
 用时 3.5 h
 
@@ -35,16 +35,16 @@ We have provided with pre-trained NER models.
 
 To test the pre-trained IDCNN+CRF model, run
 
-#python3 main.py
+python3 main.py
 
 
-# TensorBoard
+## TensorBoard
 TensorBoard生成图形的流程框架，简单概括起来就两点：
 
 TensorFlow运行并将log信息记录到文件；
 TensorBoard读取文件并绘制图形。
 
-## 启动TensorBoard Server
+### 启动TensorBoard Server
 
 启动TensorBoard Server可以与前面的记录写入并行，TensorBoard会自动的扫描日志文件的更新。
 
@@ -54,7 +54,7 @@ TensorBoard读取文件并绘制图形。
 可以只给出其上级目录，TensorBoard会自动递归扫描目录：
 tensorboard --logdir=summary --port=6006
 
-## TensorBoard Server
+### TensorBoard Server
 
 当TensorBoard服务器顺利启动后，即可打开浏览器输入地址：http://127.0.0.1:6006/查看。
 注意在Windows环境下输入http://DESKTOP-S2Q1MOS:6006
@@ -73,7 +73,7 @@ INFO:tensorflow:Restoring parameters from ckpt_IDCNN/ner.ckpt
 https://github.com/crownpku/Information-Extraction-Chinese/tree/master/NER_IDCNN_CRF
 
 
-# ModuleNotFoundError: No module named '_sqlite3'
+## ModuleNotFoundError: No module named '_sqlite3'
 
 ubuntu: sudo apt-get install libsqlite3-dev
 重新编译python
